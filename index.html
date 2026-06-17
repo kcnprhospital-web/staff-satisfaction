@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ការស្ទង់មតិភាពពេញចិត្តរបស់បុគ្គលិក - មន្ទីរពេទ្យបង្អែកខេត្តកំពង់ឆ្នាំង</title>
+    <style>
+        body {
+            font-family: 'Hanuman', 'Khmer OS Battambang', Arial, sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h2, h3, h4 {
+            color: #0056b3;
+            text-align: center;
+        }
+        .intro {
+            background-color: #e9ecef;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        .section {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+            margin-top: 15px;
+        }
+        select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: inherit;
+        }
+        .likert-scale {
+            display: flex;
+            justify-content: space-between;
+            background: #f9f9f9;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        .likert-option {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 20%;
+        }
+        .likert-option input {
+            margin-bottom: 5px;
+            transform: scale(1.2);
+        }
+        .submit-btn {
+            display: block;
+            width: 100%;
+            background-color: #0056b3;
+            color: #fff;
+            border: none;
+            padding: 15px;
+            font-size: 1.1em;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: inherit;
+            transition: background 0.3s;
+        }
+        .submit-btn:hover {
+            background-color: #003d82;
+        }
+        .submit-btn:disabled {
+            background-color: #80a8d6;
+            cursor: not-allowed;
+        }
+        .question-text {
+            margin-bottom: 10px;
+            color: #444;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>មន្ទីរពេទ្យបង្អែកខេត្តកំពង់ឆ្នាំង</h2>
+    <h3>ការស្ទង់មតិភាពពេញចិត្តរបស់បុគ្គលិក ប្រចាំឆ្នាំ២០២៦</h3>
+    
+    <div class="intro">
+        <p><i>ការស្ទង់មតិនេះធ្វើឡើងជាអនាមិក (មិនបញ្ចេញឈ្មោះ) ដើម្បីធានាបាននូវការផ្តល់មតិយោបល់ដោយស្មោះត្រង់។ ទិន្នន័យទាំងអស់នឹងត្រូវប្រើប្រាស់ដើម្បីកែលម្អគុណភាពការងារ និងបរិយាកាសការងារនៅក្នុងមន្ទីរពេទ្យរបស់យើង ស្របតាមស្តង់ដារគុណភាពសេវាមន្ទីរពេទ្យនៃព្រះរាជាណាចក្រកម្ពុជា (CHAS)។</i></p>
+    </div>
+
+    <form id="surveyForm" name="surveyForm">
+        <!-- ផ្នែកទី១ -->
+        <div class="section">
+            <h4>ផ្នែកទី១៖ ព័ត៌មានទូទៅ</h4>
+            <label for="department">១. តើលោក/លោកស្រី បម្រើការងារនៅផ្នែកណា?</label>
+            <select id="department" name="department" required>
+                <option value="">-- សូមជ្រើសរើសផ្នែក --</option>
+                <option value="Admin">ផ្នែកការិយាល័យរដ្ឋបាល-បុគ្គលិក</option>
+                <option value="Finance">ផ្នែកគណនេយ្យ និងហិរញ្ញវត្ថុ</option>
+                <option value="Technical">ផ្នែកការិយាល័យបច្ចេកទេស</option>
+                <option value="OPD">ផ្នែកពិគ្រោះជំងឺក្រៅ</option>
+                <option value="Surgery">ផ្នែកសល្យាគារ</option>
+                <option value="TraumaA">ផ្នែករបួសសល្យសាស្ត្រ ក / ខ</option>
+                <option value="GeneralMed">ផ្នែកជំងឺទូទៅ</option>
+                <option value="ICU">ផ្នែកសង្រ្គោះបន្ទាន់កម្រិតធ្ងន់ / សង្រ្គោះបន្ទាន់</option>
+                <option value="Maternity">ផ្នែកសម្ភព / រោគស្រ្តី / ជំងឺកុមារ</option>
+                <option value="Lab">ផ្នែកមន្ទីរពិសោធន៍ និងផ្តល់ឈាម</option>
+                <option value="Pharmacy">ផ្នែកឃ្លាំងឱសថ និងបរិក្ខារពេទ្យ</option>
+                <option value="CSSD">ផ្នែករម្ងាប់មេរោគរួម (CSSD)</option>
+                <option value="NCD">ផ្នែកទឹកនោមផ្អែម និងលើសសម្ពាធឈាម / ជំងឺរបេង / HIV</option>
+                <option value="Other">ផ្នែកផ្សេងៗទៀត</option>
+            </select>
+
+            <label>២. តើលោក/លោកស្រី បម្រើការងារនៅមន្ទីរពេទ្យនេះរយៈពេលប៉ុន្មានឆ្នាំហើយ?</label>
+            <select id="tenure" name="tenure" required>
+                <option value="">-- សូមជ្រើសរើសរយៈពេល --</option>
+                <option value="<1">តិចជាង ១ ឆ្នាំ</option>
+                <option value="1-5">១ ទៅ ៥ ឆ្នាំ</option>
+                <option value="6-10">៦ ទៅ ១០ ឆ្នាំ</option>
+                <option value=">10">លើសពី ១០ ឆ្នាំ</option>
+            </select>
+        </div>
+
+        <!-- ផ្នែកទី២ -->
+        <div class="section">
+            <h4>ផ្នែកទី២៖ ការវាយតម្លៃកម្រិតនៃការពេញចិត្ត</h4>
+            <p style="font-size: 0.9em; color: #666;">១ = មិនពេញចិត្តខ្លាំង | ២ = មិនពេញចិត្ត | ៣ = ធម្មតា | ៤ = ពេញចិត្ត | ៥ = ពេញចិត្តខ្លាំង</p>
+            
+            <h5 style="color: #0056b3;">ក. បរិយាកាសការងារ និងសុវត្ថិភាព</h5>
+            <div class="question-text">១. ខ្ញុំមានសម្ភារៈ និងបរិក្ខារគ្រប់គ្រាន់ក្នុងការបំពេញការងារដោយសុវត្ថិភាព។</div>
+            <div class="likert-scale">
+                <label class="likert-option"><input type="radio" name="q1" value="1" required>១</label>
+                <label class="likert-option"><input type="radio" name="q1" value="2">២</label>
+                <label class="likert-option"><input type="radio" name="q1" value="3">៣</label>
+                <label class="likert-option"><input type="radio" name="q1" value="4">៤</label>
+                <label class="likert-option"><input type="radio" name="q1" value="5">៥</label>
+            </div>
+
+            <div class="question-text">២. ការចោលសំណល់វេជ្ជសាស្ត្រ និងការបែងចែកសំរាមនៅក្នុងផ្នែករបស់ខ្ញុំ ត្រូវបានអនុវត្តបានយ៉ាងល្អ។</div>
+            <div class="likert-scale">
+                <label class="likert-option"><input type="radio" name="q2" value="1" required>១</label>
+                <label class="likert-option"><input type="radio" name="q2" value="2">២</label>
+                <label class="likert-option"><input type="radio" name="q2" value="3">៣</label>
+                <label class="likert-option"><input type="radio" name="q2" value="4">៤</label>
+                <label class="likert-option"><input type="radio" name="q2" value="5">៥</label>
+            </div>
+
+            <div class="question-text">៣. ខ្ញុំមានអារម្មណ៍សុវត្ថិភាព និងទទួលបានការគាំទ្រផ្នែកសុខភាពផ្លូវចិត្ត និងផ្លូវកាយនៅកន្លែងការងារ។</div>
+            <div class="likert-scale">
+                <label class="likert-option"><input type="radio" name="q3" value="1" required>១</label>
+                <label class="likert-option"><input type="radio" name="q3" value="2">២</label>
+                <label class="likert-option"><input type="radio" name="q3" value="3">៣</label>
+                <label class="likert-option"><input type="radio" name="q3" value="4">៤</label>
+                <label class="likert-option"><input type="radio" name="q3" value="5">៥</label>
+            </div>
+
+            <h5 style="color: #0056b3;">ខ. ភាពជាអ្នកដឹកនាំ និងទំនាក់ទំនង</h5>
+            <div class="question-text">៤. ថ្នាក់ដឹកនាំផ្នែក និងថ្នាក់ដឹកនាំមន្ទីរពេទ្យ មានការប្រាស្រ័យទាក់ទងដោយតម្លាភាព។</div>
+            <div class="likert-scale">
+                <label class="likert-option"><input type="radio" name="q4" value="1" required>១</label>
+                <label class="likert-option"><input type="radio" name="q4" value="2">២</label>
+                <label class="likert-option"><input type="radio" name="q4" value="3">៣</label>
+                <label class="likert-option"><input type="radio" name="q4" value="4">៤</label>
+                <label class="likert-option"><input type="radio" name="q4" value="5">៥</label>
+            </div>
+
+            <div class="question-text">៥. ខ្ញុំទទួលបានការវាយតម្លៃការងារដោយយុត្តិធម៌ (Blame-free culture) ពីថ្នាក់លើ។</div>
+            <div class="likert-scale">
+                <label class="likert-option"><input type="radio" name="q5" value="1" required>១</label>
+                <label class="likert-option"><input type="radio" name="q5" value="2">២</label>
+                <label class="likert-option"><input type="radio" name="q5" value="3">៣</label>
+                <label class="likert-option"><input type="radio" name="q5" value="4">៤</label>
+                <label class="likert-option"><input type="radio" name="q5" value="5">៥</label>
+            </div>
+
+            <h5 style="color: #0056b3;">គ. ការអភិវឌ្ឍវិជ្ជាជីវៈ និងការបណ្តុះបណ្តាល</h5>
+            <div class="question-text">៦. ខ្ញុំទទួលបានការបណ្តុះបណ្តាលបន្ត (CME/CNE) បានគ្រប់គ្រាន់។</div>
+            <div class="likert-scale">
+                <label class="likert-option"><input type="radio" name="q6" value="1" required>១</label>
+                <label class="likert-option"><input type="radio" name="q6" value="2">២</label>
+                <label class="likert-option"><input type="radio" name="q6" value="3">៣</label>
+                <label class="likert-option"><input type="radio" name="q6" value="4">៤</label>
+                <label class="likert-option"><input type="radio" name="q6" value="5">៥</label>
+            </div>
+
+            <h5 style="color: #0056b3;">ឃ. ការងារជាក្រុម និងការចូលរួម</h5>
+            <div class="question-text">៧. មានកិច្ចសហការ និងសាមគ្គីភាពល្អរវាងបុគ្គលិកនៅក្នុងផ្នែករបស់ខ្ញុំ។</div>
+            <div class="likert-scale">
+                <label class="likert-option"><input type="radio" name="q7" value="1" required>១</label>
+                <label class="likert-option"><input type="radio" name="q7" value="2">២</label>
+                <label class="likert-option"><input type="radio" name="q7" value="3">៣</label>
+                <label class="likert-option"><input type="radio" name="q7" value="4">៤</label>
+                <label class="likert-option"><input type="radio" name="q7" value="5">៥</label>
+            </div>
+        </div>
+
+        <!-- ផ្នែកទី៣ -->
+        <div class="section">
+            <h4>ផ្នែកទី៣៖ មតិយោបល់ និងសំណូមពរ</h4>
+            
+            <label for="feedback_positive">១. តើអ្វីដែលលោក/លោកស្រីពេញចិត្តបំផុត ក្នុងការបម្រើការងារនៅមន្ទីរពេទ្យនេះ?</label>
+            <textarea id="feedback_positive" name="feedback_positive" rows="3" placeholder="សរសេរចម្លើយនៅទីនេះ..."></textarea>
+
+            <label for="feedback_improvement">២. តើលោក/លោកស្រីមានសំណូមពរ ឬចង់ឱ្យមានការកែលម្អលើចំណុចណាខ្លះ?</label>
+            <textarea id="feedback_improvement" name="feedback_improvement" rows="3" placeholder="សរសេរចម្លើយនៅទីនេះ..."></textarea>
+        </div>
+
+        <button type="submit" id="submitBtn" class="submit-btn">បញ្ជូនទិន្នន័យស្ទង់មតិ</button>
+    </form>
+</div>
+
+<script>
+    // សូមដាក់ Web App URL ដែលអ្នកបាន Copy ពី Google Apps Script នៅទីនេះ
+    const scriptURL = '<សូមដាក់_WEB_APP_URL_របស់អ្នកនៅទីនេះ>';
+    
+    const form = document.forms['surveyForm'];
+    const btn = document.getElementById('submitBtn');
+
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+        
+        // ផ្លាស់ប្តូរស្ថានភាពប៊ូតុងពេលកំពុងបញ្ជូន
+        btn.innerText = 'កំពុងបញ្ជូនទិន្នន័យ...';
+        btn.disabled = true;
+
+        // បញ្ជូនទិន្នន័យទៅកាន់ Google Sheets
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                alert('សូមអរគុណ! ការវាយតម្លៃនិងសំណូមពររបស់អ្នកត្រូវបានបញ្ជូនដោយជោគជ័យ។');
+                form.reset();
+                btn.innerText = 'បញ្ជូនទិន្នន័យស្ទង់មតិ';
+                btn.disabled = false;
+                window.scrollTo(0, 0);
+            })
+            .catch(error => {
+                alert('មានបញ្ហាក្នុងការបញ្ជូនទិន្នន័យ។ សូមពិនិត្យមើលអ៊ីនធឺណិតរបស់អ្នក រួចព្យាយាមម្តងទៀត។');
+                console.error('Error!', error.message);
+                btn.innerText = 'បញ្ជូនទិន្នន័យស្ទង់មតិ';
+                btn.disabled = false;
+            });
+    });
+</script>
+
+</body>
+</html>
